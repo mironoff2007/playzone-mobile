@@ -19,24 +19,23 @@ class SearchViewModel : BaseSharedViewModel<SearchViewState, SearchAction, Searc
 
     override fun obtainEvent(viewEvent: SearchEvent) {
         when (viewEvent) {
-            is SearchEvent.GameClicked -> showDetailedGame()
+            is SearchEvent.GameClicked -> presentDetailedGame()
             is SearchEvent.QueryChanged -> searchGame(query = viewEvent.query)
         }
     }
 
-    private fun showDetailedGame() {
-        viewAction = SearchAction.ShowGameDetail
+    private fun presentDetailedGame() {
+        
     }
 
     private fun searchGame(query: String) {
         searchJob = viewModelScope.launch {
-            viewState = viewState.copy(query = query)
             searchJob?.cancel()
-            delay(500)
+            delay(400)
             viewState = try {
-                val gamesResponse = gamesRepository.searchGame(query)
+                val gamesResponse = gamesRepository.searchGame(query = query)
                 viewState.copy(games = gamesResponse)
-            } catch (e:Exception) {
+            } catch (e: Exception) {
                 viewState.copy(games = emptyList())
             }
         }

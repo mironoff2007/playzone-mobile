@@ -2,10 +2,11 @@
 //  ViewModel + View.swift
 //  iosApp
 //
-//  Created by Алексей Гладков on 08.10.2022.
+//  Created by Алексей Гладков on 02.10.2022.
 //  Copyright © 2022 orgName. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
 import Combine
 

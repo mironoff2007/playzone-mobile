@@ -1,11 +1,11 @@
 import SwiftUI
+import SharedSDK
 
 struct ContentView: View {
     
 	var body: some View {
-        LoginScreen()
+        LoginView()
             .background(Color.backgroundPrimary)
-            .background(ignoresSafeAreaEdges: [.top, .bottom, .leading, .trailing])
 	}
 }
 

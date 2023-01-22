@@ -16,13 +16,13 @@ import org.kodein.di.singleton
 internal val ktorModule = DI.Module("ktorModule") {
     bind<HttpClient>() with singleton {
         HttpClient(HttpEngineFactory().createEngine()) {
+
             install(Logging) {
                 logger = Logger.SIMPLE
                 level = LogLevel.ALL
             }
 
             install(DefaultRequest)
-
 
             install(ContentNegotiation) {
                 json(Json {
@@ -38,7 +38,7 @@ internal val ktorModule = DI.Module("ktorModule") {
             }
 
             defaultRequest {
-                url("https://playzone-backend.herokuapp.com")
+                url("http://0.0.0.0:8080")
                 header("Content-Type", "application/json; charset=UTF-8")
             }
         }

@@ -186,7 +186,6 @@ attr indeterminateProgressStyle
 attr initialActivityCount
 attr isLightTheme
 attr itemPadding
-attr lStar
 attr lastBaselineToBottomHeight
 attr layout
 attr lineHeight
@@ -618,7 +617,6 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable ic_100tb
 drawable ic_user_avatar
 drawable notification_action_background
 drawable notification_bg
@@ -696,7 +694,6 @@ id buttonPanel
 id checkbox
 id checked
 id chronometer
-id coil_request_manager
 id compose_view_saveable_id_tag
 id consume_window_insets_tag
 id content
@@ -1262,7 +1259,7 @@ styleable AppCompatTheme actionBarDivider actionBarItemBackground actionBarPopup
 styleable ButtonBarLayout allowStacking
 styleable Capability queryPatterns shortcutMatchRequired
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
-styleable ColorStateListItem alpha android_alpha android_color android_lStar lStar
+styleable ColorStateListItem alpha android_alpha android_color
 styleable CompoundButton android_button buttonCompat buttonTint buttonTintMode
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily

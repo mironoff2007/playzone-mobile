@@ -8,6 +8,7 @@ pluginManagement {
 
 rootProject.name = "playzone-mobile"
 include(":androidApp")
+include(":desktop")
 include(":common:auth:api")
 include(":common:auth:presentation")
 include(":common:auth:data")
@@ -22,7 +23,6 @@ include(":common:games:data")
 include(":common:games:compose")
 include(":common:main:api")
 include(":common:main:presentation")
-include(":common:main:data")
 include(":common:main:compose")
 include(":common:core")
 include(":common:core-compose")

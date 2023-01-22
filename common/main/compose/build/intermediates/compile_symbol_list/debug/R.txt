@@ -185,7 +185,6 @@ int attr indeterminateProgressStyle 0x0
 int attr initialActivityCount 0x0
 int attr isLightTheme 0x0
 int attr itemPadding 0x0
-int attr lStar 0x0
 int attr lastBaselineToBottomHeight 0x0
 int attr layout 0x0
 int attr lineHeight 0x0
@@ -617,7 +616,6 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
-int drawable ic_100tb 0x0
 int drawable ic_user_avatar 0x0
 int drawable notification_action_background 0x0
 int drawable notification_bg 0x0
@@ -695,7 +693,6 @@ int id buttonPanel 0x0
 int id checkbox 0x0
 int id checked 0x0
 int id chronometer 0x0
-int id coil_request_manager 0x0
 int id compose_view_saveable_id_tag 0x0
 int id consume_window_insets_tag 0x0
 int id content 0x0
@@ -1491,12 +1488,10 @@ int styleable CheckedTextView_android_checkMark 0
 int styleable CheckedTextView_checkMarkCompat 1
 int styleable CheckedTextView_checkMarkTint 2
 int styleable CheckedTextView_checkMarkTintMode 3
-int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5, 0x1010647, 0x0 }
+int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5 }
 int styleable ColorStateListItem_alpha 0
 int styleable ColorStateListItem_android_alpha 1
 int styleable ColorStateListItem_android_color 2
-int styleable ColorStateListItem_android_lStar 3
-int styleable ColorStateListItem_lStar 4
 int[] styleable CompoundButton { 0x1010107, 0x0, 0x0, 0x0 }
 int styleable CompoundButton_android_button 0
 int styleable CompoundButton_buttonCompat 1

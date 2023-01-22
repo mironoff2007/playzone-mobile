@@ -17,34 +17,31 @@ kotlin {
                 implementation(Dependencies.Ktor.negotiation)
                 implementation(Dependencies.Ktor.kotlin_json)
                 implementation(Dependencies.Ktor.logging)
-
-                implementation(Dependencies.Settings.core)
                 implementation(Dependencies.Settings.noargs)
 
                 api(Dependencies.Kodein.core)
-
-//                api(Dependencies.SqlDelight.core)
+                api(Dependencies.SqlDelight.core)
             }
         }
 
         androidMain {
             dependencies {
                 implementation(Dependencies.Ktor.android)
-//                implementation(Dependencies.SqlDelight.android)
+                implementation(Dependencies.SqlDelight.android)
             }
         }
 
         iosMain {
             dependencies {
                 implementation(Dependencies.Ktor.ios)
-//                implementation(Dependencies.SqlDelight.ios)
+                implementation(Dependencies.SqlDelight.ios)
             }
         }
 
         desktopMain {
             dependencies {
                 implementation(Dependencies.Ktor.okhttp)
-//                implementation(Dependencies.SqlDelight.desktop)
+                implementation(Dependencies.SqlDelight.desktop)
             }
         }
     }

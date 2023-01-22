@@ -30,25 +30,29 @@ class LoginViewModel : BaseSharedViewModel<LoginViewState, LoginAction, LoginEve
     }
 
     private fun checkUserLoggedIn() {
-        if (authRepository.isUserLoggedIn()) {
-            viewAction = LoginAction.OpenMainFlow
+        viewModelScope.launch {
+            val isUserLoggedIn = authRepository.isUserLoggedIn()
+            if (isUserLoggedIn) {
+                viewAction = LoginAction.OpenMainFlow
+            }
         }
     }
 
     private fun sendLogin() {
         viewState = viewState.copy(isSending = true)
         viewModelScope.launch {
-            try {
+            viewState = try {
                 val response = authRepository.login(viewState.email, viewState.password)
                 if (response.token.isNotBlank()) {
-                    viewState = viewState.copy(email = "", password = "", isSending = false)
-                    viewAction = LoginAction.OpenMainFlow
+                    viewState.copy(email = "", password = "", isSending = false)
                 } else {
-                    viewState = viewState.copy(isSending = false)
+                    viewState.copy(isSending = false)
                 }
             } catch (e: Exception) {
-                viewState = viewState.copy(isSending = false)
+                viewState.copy(isSending = false)
             }
+
+            viewAction = LoginAction.OpenMainFlow
         }
     }
 

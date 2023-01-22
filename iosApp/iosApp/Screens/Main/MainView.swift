@@ -2,7 +2,7 @@
 //  MainView.swift
 //  iosApp
 //
-//  Created by Алексей Гладков on 08.10.2022.
+//  Created by Алексей Гладков on 03.10.2022.
 //  Copyright © 2022 orgName. All rights reserved.
 //
 
@@ -11,24 +11,24 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            HomeScreen()
+            HomeView()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Profile", systemImage: "house")
                 }
             
-            SearchScreen()
+            SearchView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            EventsScreen()
+            TournamentsView()
                 .tabItem {
-                    Label("Events", systemImage: "person.fill")
+                    Label("Profile", systemImage: "person.fill")
                 }
             
-            VideosScreen()
+            VideosView()
                 .tabItem {
-                    Label("Events", systemImage: "person.fill")
+                    Label("Profile", systemImage: "person.fill")
                 }
         }
     }
